@@ -1,0 +1,52 @@
+import os
+
+from dotenv import load_dotenv
+
+load_dotenv()
+
+APP_ICON_PATH = "assets/img/highland-hawk-logo.png"
+APP_NAME = "Highland Highlights"
+DOCUMENT_DIRECTORY = "assets/documents"
+
+BACKGROUND_COLOR = "background-color: #101010"
+CLOCK_COLOR = "color: #007c70"
+SEPARATOR_COLOR = "background-color: #eb8d18"
+TEXT_BODY_COLOR = "color: #cfcfcf"
+TEXT_HEADER_COLOR = "color: #007c70"
+
+FONT_FAMILY = "font-family: Nunito"
+FONT_WEIGHT = "font-weight: bold"
+CLOCK_FONT_SIZE = 214
+DATE_FONT_SIZE = 58
+SCROLLING_TEXT_FONT_SIZE = 35
+TEMPERATURE_FONT_SIZE = 58
+
+CLOCK_HEIGHT = 176
+SEPARATOR_HEIGHT = 12
+WEATHER_ICON_HEIGHT = 80
+WEATHER_ICON_WIDTH = 80
+WEATHER_LAYOUT_CONTENT_SPACING = 16
+DATE_WEATHER_LAYOUT_CONTENT_SPACING = 16
+PARAGRAPH_SPACING = 35
+
+REFERENCE_SCREEN_WIDTH = 1920
+REFERENCE_SCREEN_HEIGHT = 1080
+SLIDESHOW_DPI = 300
+
+CLOCK_UPDATE_INTERVAL = 1000
+SLIDE_CYCLE_INTERVAL = 15000
+TEXT_SCROLL_INTERVAL = 20
+WEATHER_UPDATE_INTERVAL = 900000
+
+DOCX_XML_NAMESPACE = (
+    "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
+)
+DOCX_BODY_COLOR_FILTER = "#222222"
+DOCX_HEADER_COLOR_FILTER = "#006666"
+
+WEATHER_API_KEY = os.getenv("WEATHER_API_KEY")
+WEATHER_API_LOCATION = "gilbert"
+WEATHER_API_URL = (
+    "https://api.weatherapi.com/v1/current.json"
+    f"?key={WEATHER_API_KEY}&q={WEATHER_API_LOCATION}"
+)
